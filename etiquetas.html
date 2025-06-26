@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nuevas etiquetas de HTML</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    span {
+        color: rgb(255, 0, 0);
+    }
+    fieldset {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #999;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .enlace-info {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h2>Ejemplo de titulo</h2>
+    <p>
+      texto de ejemplo con <span>contenido destacado</span>. 
+      Usamos <strong>texto en negrita</strong> y <em>texto en cursiva</em> con etiquetas.
+    </p>
+
+    <div class="enlace-info">
+      ¿Quieres saber más? visita mi repositorio
+      <a href="https://github.com/AngelGamba" target="_blank">GitHub-AngelGamba</a>.
+    </div>
+  </div>
+
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Formulario de ejemplo</legend>
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </fieldset>
+  </form>
+
+</body>
+</html>
+
