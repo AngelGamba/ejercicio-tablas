@@ -1,4 +1,3 @@
-// Variables globales configurables
 let configSubmarino = { vida: 2500, ataque: 500 };
 let factoresNumerador = [2, 3, 4, 7, 8, 10];
 let factoresDenominador = [12, 12, 12, 12, 12, 12];
