@@ -28,7 +28,7 @@ const mostrarPosts = (posts, users, photos) => {
   posts.forEach((post, index) => {
     const usuario = users.find(u => u.id === post.userId);
     const { title, body } = post;
-    const imagen = photos[index]?.thumbnailUrl || "https://via.placeholder.com/150";
+    const imagen = `https://picsum.photos/600/300?random=${index}`;
  
     const html = `<div class="post">
                     <h3>${title}</h3>
