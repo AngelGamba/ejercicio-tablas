@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>La Guerra en HD</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #f4f4f4;
+    }
+    .contenedor {
+      display: flex;
+      height: 100vh;
+      gap: 10px;
+      padding: 10px;
+    }
+    .columna {
+      flex: 1;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-y: auto;
+    }
+    .columna h3 {
+      margin-top: 0;
+    }
+    button {
+      margin: 5px 0;
+      padding: 10px 15px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    input[type="number"] {
+      width: 80px;
+      margin-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+  <h1 style="text-align: center;">La Guerra en HD</h1>
+  <div class="contenedor">
+<!-- Columna izquierda: Formularios -->
+<div class="columna" style="flex: 0.8;">
+  <h3><img src="img\submarino.jfif" alt="Submarino" width="60" style="vertical-align: middle;">Definición de vida y poder del submarino</h3>
+  <label>Vida: <input type="number" id="vidaSub" value="2500"></label><br>
+  <label>Poder: <input type="number" id="poderSub" value="500"></label><br>
+  <button onclick="guardarSubmarino()">Guardar</button>
+<hr>
+  <h3>Definición de vida de las unidades</h3>
+  <label><img src="img\soldadoregular.jfif" alt="Soldado Regular" width="30" style="vertical-align: middle;">Soldado Regular: <input type="number" step="0.1" id="num0" value="2"> / <input type="number" step="0.1" id="den0" value="12"></label><br>
+  <label><img src="img\soldadoprofesional.jfif" alt="Soldado Profesional" width="30" style="vertical-align: middle;">Profesional: <input type="number" step="0.1" id="num1" value="3"> / <input type="number" step="0.1" id="den1" value="12"></label><br>
+  <label><img src="img\soldadoelite.jfif" alt="Soldado Elite" width="30" style="vertical-align: middle;">Elite: <input type="number" step="0.1" id="num2" value="4"> / <input type="number" step="0.1" id="den2" value="12"></label><br>
+  <label><img src="img\carrotanque.jfif" alt="Carrotanque" width="60" style="vertical-align: middle;">Carro Tanque: <input type="number" step="0.1" id="num3" value="7"> / <input type="number" step="0.1" id="den3" value="12"></label><br>
+  <label><img src="img\helicoptero.jfif" alt="Helicoptero" width="60" style="vertical-align: middle;">Helicoptero: <input type="number" step="0.1" id="num4" value="8"> / <input type="number" step="0.1" id="den4" value="12"></label><br>
+  <label><img src="img\avion.jfif" alt="Avion" width="60" style="vertical-align: middle;">Avion: <input type="number" step="0.1" id="num5" value="10"> / <input type="number" step="0.1" id="den5" value="12"></label><br>
+  <button onclick="guardarFactores()">Guardar</button>
+<hr>
+<button id="btnCrear" onclick="crearEjercito()">Crear Ejercitos</button>
+</div>
+ 
+    <!-- Columna centro: Ejercitos y resultados -->
+<div class="columna" id="panelCentro" style="background-color: #ffe6e6;">
+<h3>Información de los Ejercitos</h3>
+<!-- Se llena con JS -->
+</div>
+ 
+    <!-- Columna derecha: Log -->
+<div class="columna" id="panelDerecha" style="background-color: #e6f2ff;">
+<h3>Log de turnos</h3>
+</div>
+</div>
+ 
+  <!-- Botones de abajo -->
+<div style="text-align: center; margin-top: 10px;">
+  <button id="btnFight" onclick="simular()" disabled style="background-color: #ff4d4d;">Fight!</button>
+  <button id="btnNuevaGuerra" onclick="nuevaGuerra()" disabled style="background-color: #4da6ff;">Nueva Guerra</button>
+</div>
+ 
+<script src="guerra2.js"></script>
+
+</body>
+</html>
