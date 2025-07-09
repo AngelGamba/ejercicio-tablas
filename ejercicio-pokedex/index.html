@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Pokédex</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="filters">
+        <button onclick="mostrarTodos()">Todos</button>
+        <button onclick="mostrarFavoritos()">Favoritos</button>
+      </div>
+      <div id="pokemonList" class="pokemon-list"></div>
+      <div class="pagination">
+        <button onclick="paginaAnterior()">« Anterior</button>
+        <span id="paginaActual"></span>
+        <button onclick="paginaSiguiente()">Siguiente »</button>
+      </div>
+    </aside>
+    <main class="details">
+      <div id="pokemonDetail" class="pokemon-detail"></div>
+    </main>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

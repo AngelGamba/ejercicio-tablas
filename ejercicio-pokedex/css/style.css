@@ -1,0 +1,137 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 30%;
+  background: #ffffff;
+  padding: 10px;
+  overflow-y: auto;
+  border-right: 2px solid #ccc;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.pokemon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pokemon-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background: #e0f7fa;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pokemon-card img {
+  width: 40px;
+  height: 40px;
+}
+
+.details {
+  width: 70%;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 430px;
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+  border-radius: 15px;
+}
+
+.pokemon-detail {
+  background: #fbeec1;
+  border: 20px solid #f4d03f;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+}
+
+.pokemon-detail h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.pokemon-images {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.pokemon-images img {
+  width: 100px;
+  height: 100px;
+}
+
+.pokemon-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pokemon-table td {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+ 
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-top: 2px solid #ccc;
+  }
+ 
+  .details {
+    width: 100%;
+    margin: 0 auto 20px auto;
+  }
+ 
+  .filters {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+ 
+  .pokemon-images {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+ 
+  .pokemon-card {
+    justify-content: space-around;
+  }
+}
