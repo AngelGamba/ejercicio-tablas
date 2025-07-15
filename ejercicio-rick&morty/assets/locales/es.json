@@ -1,0 +1,16 @@
+{
+  "appTitle": "Rick y Morty Personajes",
+  "filterOrigin": "Origen",
+  "filterStatus": "Estatus",
+  "filterButton": "Filtrar",
+  "statusAlive": "Vivo",
+  "statusDead": "Muerto",
+  "statusUnknown": "Desconocido",
+  "species": "Especie",
+  "gender": "Género",
+  "origin": "Origen",
+  "location": "Ubicación",
+  "fetchError": "Error al cargar los personajes.",
+  "noCharacters": "No se encontraron personajes.",
+  "statusLabel": "Estado"
+}

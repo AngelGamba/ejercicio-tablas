@@ -1,0 +1,16 @@
+{
+  "appTitle": "Rick and Morty Characters",
+  "filterOrigin": "Origin",
+  "filterStatus": "Status",
+  "filterButton": "Filter",
+  "statusAlive": "Alive",
+  "statusDead": "Dead",
+  "statusUnknown": "Unknown",
+  "species": "Species",
+  "gender": "Gender",
+  "origin": "Origin",
+  "location": "Location",
+  "fetchError": "Failed to load characters.",
+  "noCharacters": "No characters found.",
+  "statusLabel": "Status"
+}
