@@ -5,6 +5,12 @@ import '@material/web/select/select-option.js';
 import './components/data-manager.js';
 import './components/character-card.js';
 import './components/filter-form.js';
+import { registerTranslateConfig, use, translate } from "lit-translate";
+
+registerTranslateConfig({
+  loader: lang => fetch(`/assets/locales/${lang}.json`).then(res => res.json())
+});
+use("es");
 
 class RickAndMortyApp extends LitElement {
   static properties = {
@@ -14,13 +20,13 @@ class RickAndMortyApp extends LitElement {
   constructor() {
     super();
     this.characters = [];
+    this._lang = use.lang;
   }
 
   render() {
     return html`
       <data-manager @characters-loaded=${this._updateCharacters}></data-manager>
       <filter-form @apply-filters=${this._applyFilters}></filter-form>
-
       <div class="cards-container">
         ${this.characters.map(char => html`
           <character-card .character=${char}></character-card>
